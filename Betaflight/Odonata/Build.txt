@@ -1,0 +1,16 @@
+resource SERIAL_TX 11 A00
+resource SERIAL_RX 2 NONE
+resource SERIAL_RX 11 A03
+feature -RX_PARALLEL_PWM
+feature SOFTSERIAL
+serial 0 64 115200 57600 0 115200
+serial 1 2048 115200 57600 0 115200
+serial 30 16384 115200 57600 0 19200
+set serialrx_provider = CRSF
+set dshot_idle_value = 1200
+set dshot_bidir = ON
+set dshot_bitbang = AUTO
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set yaw_motors_reversed = ON
+set name = UhOdonata
